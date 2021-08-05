@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Student</title>
+<style>
+body {
+  background-color: ORANGE;
+}
+</style>
+
+<script>
+function validateForm() {
+  
+let x = document.forms["ad_sub"]["student_id"].value;
+  if (x == "") {
+    alert("Student id must be filled out");
+    return false;
+    }
+  
+  let y = document.forms["ad_sub"]["student_name"].value;
+  if (y == "") {
+	    alert("Student name must be filled out");
+	    return false;
+	    }
+  
+  let z = document.forms["ad_sub"]["email_id"].value;
+  if (z == "") {
+	    alert("Email id must be filled out");
+	    return false;
+	    }
+  
+    
+    
+  
+  let a = document.forms["ad_sub"]["contact_no"].value;
+  if (a == "") {
+	    alert("Contact number must be filled out");
+	    return false;
+	    }
+  
+  if (isNaN(a)){  
+    alert("Enter Numeric value only in contact numbers");  
+    return false;  
+  }
+  
+  let b = document.forms["ad_sub"]["birth_date"].value;
+  if (b == "") {
+	    alert("Birth date must be filled out");
+	    return false;
+	    }
+  
+  let c = document.forms["ad_sub"]["com_adress"].value;
+  if (c == "") {
+	    alert("Communication adress must be filled out");
+	    return false;
+	    }
+  
+  
+}
+</script>
+
+</head>
+<body>
+
+
+<form name="ad_sub" onsubmit="return validateForm()" method="post" action="add_student">
+<table align="center">
+<tr>
+<td align="center">
+<h1>Learner's Academy</h1>
+<b> Add New Student</b>
+</td>
+</tr>
+
+<tr>
+<td>
+Student id : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"  name="student_id">
+</td>
+</tr>
+<tr>
+<td>
+Student Name :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="student_name">
+</td>
+</tr>
+
+<tr>
+<td>
+Email id :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="email_id">
+</td>
+</tr>
+
+<tr>
+<td>
+Contact No. :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="contact_no">
+</td>
+</tr>
+<tr>
+<td>
+Birth Date :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="birth_date">
+</td>
+</tr>
+<tr>
+<td>
+Communication Address :&nbsp;<input type="text" name="com_adress"><br>
+</td>
+</tr>
+<tr>
+<td>
+HSC Percentage :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="hsc_per"><br>
+</td>
+</tr>
+<tr>
+<td>
+Course id :&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="course_id"><br>
+</td>
+</tr>
+
+<tr>
+<td align="center">
+<input type="submit" name="Submit">
+</td>
+</tr>
+</table>
+</form>
+
+</body>
+</html>

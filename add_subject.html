@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add new Subject</title>
+<style>
+body {
+  background-color: ORANGE;
+}
+</style>
+
+<script>
+function validateForm() {
+  
+let x = document.forms["ad_sub"]["sub_id"].value;
+  if (x == "") {
+    alert("Subject id must be filled out");
+    return false;
+    }
+  
+  let y = document.forms["ad_sub"]["sub_name"].value;
+  if (y == "") {
+	    alert("Subject name must be filled out");
+	    return false;
+	    }
+  
+  let z = document.forms["ad_sub"]["course_id"].value;
+  if (z == "") {
+	    alert("Course id must be filled out");
+	    return false;
+	    }
+  
+    
+    
+  
+    
+  
+}
+</script>
+
+</head>
+<body>
+<form name="ad_sub" onsubmit="return validateForm()" method="post" action="add_subject">
+<table align="center">
+
+<tr>
+<td align="center">
+<h1>Learner's Academy</h1>
+<b> Add New Subject</b>
+</td>
+</tr>
+
+<tr>
+<td>
+Subject id :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"  name="sub_id"><br>
+</td></tr>
+<tr><td>
+Subject Name :<input type="text" name="sub_name"><br>
+</td></tr>
+<tr><td>
+Course id :  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<input type="text" name="course_id"><br>
+</td></tr>
+<tr><td align="center">
+<input type="submit" name="Submit">
+</td></tr>
+</table>
+</form>
+
+</body>
+</html>

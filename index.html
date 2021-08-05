@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Institute Management Software</title>
+<style>
+body {
+  background-color: ORANGE;
+}
+</style>
+<script>
+function validateForm() {
+  
+let x = document.forms["myForm"]["uname"].value;
+  if (x == "") {
+    alert("Username must be filled out");
+    return false;
+    }
+  
+  let y = document.forms["myForm"]["password"].value;
+  if (y == "") {
+	    alert("Password must be filled out");
+	    return false;
+	    }
+  
+  
+}
+</script>
+
+
+</head>
+<body>
+<form method="POST" onsubmit="return validateForm()" action="Login" name="myForm">
+
+<table style="width: 319px; height: 101px" align="center" >
+<tr>
+<td align="center">
+<h1>Learner's Academy</h1>
+<b> Admin Login</b>
+</td>
+</tr>
+
+<tr>
+<td>
+User Name:<input type="text" name="uname">
+</td>
+</tr>
+<tr>
+<td>
+Password :                      <input type="password" name="password">
+</td>
+</tr>
+
+<tr>
+<td align="center">
+  <input type="submit" name="submit" >
+</td>
+</tr>
+
+</table>
+		
+
+
+</form>
+
+</body>
+</html>

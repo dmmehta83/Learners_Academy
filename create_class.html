@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Create New Class</title>
+<style>
+body {
+  background-color: ORANGE;
+}
+</style>
+
+<script>
+function validateForm() {
+  
+let x = document.forms["cr_class"]["class_id"].value;
+  if (x == "") {
+    alert("Class id must be filled out");
+    return false;
+    }
+  
+  let y = document.forms["cr_class"]["class_name"].value;
+  if (y == "") {
+	    alert("Class name must be filled out");
+	    return false;
+	    }
+  
+  let z = document.forms["cr_class"]["a_y"].value;
+  if (z == "") {
+	    alert("Academic year must be filled out");
+	    return false;
+	    }
+  
+    
+    
+  
+  let a = document.forms["cr_class"]["course_id"].value;
+  if (a == "") {
+	    alert("Course id must be filled out");
+	    return false;
+	    }
+  
+  
+  
+  let b = document.forms["cr_class"]["division_id"].value;
+  if (b == "") {
+	    alert("Division id  must be filled out");
+	    return false;
+	    }
+  
+   
+  
+}
+</script>
+
+</head>
+<body>
+<form name="cr_class" onsubmit="return validateForm()" method="post" action="create_class">
+<table align="center">
+<tr>
+<td align="center">
+<h1>Learner's Academy</h1>
+<b> Create New Class</b>
+</td>
+</tr>
+
+<tr><td>
+Class id :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"  name="class_id"><br>
+</td></tr>
+<tr><td>
+
+Class Name :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="class_name"><br>
+</td></tr>
+<tr><td>
+Academic Year :<input type="text" name="a_y"><br>
+</td></tr>
+<tr><td>
+course id :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="course_id"><br>
+</td></tr>
+<tr><td>
+division id :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="division_id"><br>
+</td></tr>
+<tr><td align="center">
+<input type="submit" name="Submit">
+</td></tr>
+</table>
+</form>
+
+</body>
+</html>

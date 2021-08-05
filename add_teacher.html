@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Teacher</title>
+<style>
+body {
+  background-color: ORANGE;
+}
+</style>
+
+<script>
+function validateForm() {
+  
+let x = document.forms["ad_sub"]["teacher_id"].value;
+  if (x == "") {
+    alert("Teacher id must be filled out");
+    return false;
+    }
+  
+  let y = document.forms["ad_sub"]["teacher_name"].value;
+  if (y == "") {
+	    alert("Teacher name must be filled out");
+	    return false;
+	    }
+  
+  let z = document.forms["ad_sub"]["email_id"].value;
+  if (z == "") {
+	    alert("Email id must be filled out");
+	    return false;
+	    }
+  
+    
+    
+  
+  let a = document.forms["ad_sub"]["contact_no"].value;
+  if (a == "") {
+	    alert("Contact number must be filled out");
+	    return false;
+	    }
+  
+  if (isNaN(a)){  
+    alert("Enter Numeric value only in contact numbers");  
+    return false;  
+  }
+  
+  let b = document.forms["ad_sub"]["birth_date"].value;
+  if (b == "") {
+	    alert("Birth date must be filled out");
+	    return false;
+	    }
+  
+  let c = document.forms["ad_sub"]["com_adress"].value;
+  if (c == "") {
+	    alert("Communication adress must be filled out");
+	    return false;
+	    }
+  
+  let d = document.forms["ad_sub"]["edu_details"].value;
+  if (d == "") {
+	    alert("edu_details must be filled out");
+	    return false;
+	    }
+  
+  let e = document.forms["ad_sub"]["course_id"].value;
+  if (e == "") {
+	    alert("course id must be filled out");
+	    return false;
+	    }
+  
+  
+}
+</script>
+
+</head>
+<body>
+<form name="ad_sub" onsubmit="return validateForm()" method="post" action="add_teacher">
+<table align="center">
+<tr>
+<td align="center">
+<h1>Learner's Academy</h1>
+<b> Add New Teacher</b>
+</td>
+</tr>
+<tr>
+<td>
+Teacher id : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"  name="teacher_id"><br>
+</td>
+</tr>
+<tr>
+<td>
+Teacher Name : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="teacher_name">
+</td>
+</tr>
+<tr>
+<td>
+Email id : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="email_id">
+</td>
+</tr>
+<tr>
+<td>
+
+Contact No. :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="contact_no">
+</td>
+</tr>
+<tr>
+<td>
+Birth Date :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="birth_date">
+</td>
+</tr>
+<tr>
+<td>
+Communication Address :<input type="text" name="com_adress">
+</td>
+</tr>
+<tr>
+<td>
+Education Details :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="edu_details">
+</td>
+</tr>
+<tr>
+<td>
+Course id :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="course_id">
+</td>
+</tr>
+<tr>
+<td align="center">
+<input type="submit" name="Submit">
+</td>
+</tr>
+</table>
+
+</form>
+
+</body>
+</html>
